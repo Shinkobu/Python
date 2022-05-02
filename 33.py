@@ -13,4 +13,5 @@ for i in range (1,k+1):
     data.write(f'{c}x^{currentPower}+')
 
 data.write(f'{random.randint(0,100)}=0\n')
+data.close
 
