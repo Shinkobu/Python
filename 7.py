@@ -10,9 +10,9 @@
 # 110
 # 111
 
-xList = [0,0,0,0,1,1,1,1]
-yList = [0,0,1,1,0,0,1,1]
-zList = [0,1,0,1,0,1,0,1]
+xList = [False,False,False,False,True,True,True,True]
+yList = [False,False,True,True,False,False,True,True]
+zList = [False,True,False,True,False,True,False,True]
 
 for i in range(0,8):
     X = xList[i]
