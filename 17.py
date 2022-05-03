@@ -1,18 +1,23 @@
 # 17 Задать список из N элементов, заполненных числами из [-N, N]. Найти произведение элементов на указанных позициях. Позиции хранятся в файле file.txt в одной строке одно число
 
 n = int(input("Введите N \n"))
+
+# создаём список [-N, N]
 i=1
-r=0
-resultSum=0
 resultList = []
 
-for i in range(1,n+1):
-    r = round(pow((1+1/i),i),3)
-    resultList.append (r)
-    resultSum +=r
-
+for i in range(-n,n+1):
+    resultList.append (i)
+   
 print(f"Последовательность: \n {resultList}")
 
-print(f"Сумма элементов: \n {resultSum}")
+#  считываем позиции из файла и находим результат 
+
+# Берём данные из 1 файла
+data = open('file.txt', 'r')
+for line in data:
+    S = int(data.readline())
+    print(S)
+data.close
 
 

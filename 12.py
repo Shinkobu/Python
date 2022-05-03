@@ -4,7 +4,9 @@ n = int(input("Введите количество элементов слова
 
 dictionary = {}
 
-for a in range(1,n+1):    
-    dictionary[a] = 3*a+1
-    
+# for a in range(1,n+1):    Можно записать так
+#     dictionary[a] = 3*a+1
+
+dictionary = {a: 3*a+1 for a in range(1,n+1)} # тоже самое, но в одно выражение
+
 print('Итоговый словарь: ',dictionary)
