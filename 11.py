@@ -7,6 +7,5 @@
 
 n = int(input("Введите количество элементов в последовательности = "))
 
-P = [pow(-1,P) * (3**P) for P in range(n)]
+P = [(-3)**P for P in range(n)]
 print(P)
-
