@@ -2,7 +2,8 @@
 
 # сделать список строк
 
-stringList = ["qwe", "asd2", "zxc1", "qwe6", "ertqwe"]
+stringList = ["qwe", "asd2", "zx2c1", "q33we6", "ertqwe"]
+print(f"Имеем список {stringList}")
 N = str(input(f"Введите число для поиска \n"))
 
 
@@ -10,10 +11,15 @@ N = str(input(f"Введите число для поиска \n"))
 
 def findNumber(N,stringList):
     F=0
+    findSuccess = 0
     for i in range(0,len(stringList)):
         F = stringList[i].find(N)
-        print(F)    
-
+        # print(F)
+        if F !=-1:
+            print(f"Число найдено в элементе номер {i+1} ")
+            findSuccess = 1
+    if findSuccess != 1:
+        print(f"Число не найдено")
              
 
 
