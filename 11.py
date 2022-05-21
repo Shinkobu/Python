@@ -5,7 +5,19 @@
 
 # P(n) = 3 в степени (номер элемента) * -1 в степени (номер элемента -1)
 
-n = int(input("Введите количество элементов в последовательности = "))
+def genList1 ():
+    n = int(input("Введите количество элементов в последовательности = "))
+    P = []
+    for i in range (0,n):
+        P.insert(i,(-3)**i) 
+    print(P)
 
-P = [(-3)**P for P in range(n)]
-print(P)
+
+def genList2 ():
+    n = int(input("Введите количество элементов в последовательности = "))
+
+    P = [(-3)**i for i in range(n)]
+    print(P)
+
+genList1 () # Вариант через insert
+genList2 () # Вариант через list comprehension
