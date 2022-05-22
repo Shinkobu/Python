@@ -20,7 +20,7 @@ def task17_1 ():
 
     # Берём данные из 1 файла
     indexList = []
-    data = open('file.txt', 'r')
+    data = open('task17.txt', 'r')
 
     for line in data:
         S = int(line)
@@ -48,7 +48,7 @@ def task17_2 ():
     #  считываем позиции из файла и находим результат 
     # Берём данные из 1 файла
 
-    data = open('file.txt', 'r')
+    data = open('task17.txt', 'r')
     indexList = [int(line) for line in data]
     data.close
 
