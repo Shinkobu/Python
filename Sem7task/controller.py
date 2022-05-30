@@ -25,6 +25,7 @@
 #  Формат включает в себя структуру и разделитель
 
 import csv
+from datetime import datetime
 from itertools import count
 from queue import Empty
 from sqlite3 import Row
@@ -42,7 +43,7 @@ def show_db():
         # Считывание данных из CSV файла
         print(f'\nТелефонный справочник имеет вид: \n')
         for row in file_reader:
-            print(f'{row[0]} {row[1]} {row[2]} {row[3]}')
+            print(f'{row[0]} {row[1]} {row[2]} {row[3]} {row[4]}')
             count += 1
         print(f'\nВсего в файле {count} строк.\n')
 
@@ -57,7 +58,7 @@ def import_data(delim):
         csv_imp = csv.reader(imp_file, delimiter = delim)
 
         for row in csv_imp:
-            imp_row_list = [row[0], row[1], row[2], row[3]]
+            imp_row_list = [row[0], row[1], row[2], row[3], datetime.now()]
             csv_db.writerow(imp_row_list)
             print (row)
 
@@ -72,8 +73,7 @@ def export_data(db_delimiter,out_delimeter):
         csv_db = csv.reader(db_file, delimiter = db_delimiter)
         exp_row_list = []
         for row in csv_db:
-            exp_row_list = [row[0], row[1], row[2], row[3]]
-            csv_exp.writerow(exp_row_list)
+            csv_exp.writerow([row[0], row[1], row[2], row[3], datetime.now()])
             print (row)
 
 # Импорт данных в базу данных - вариант со значениями в одну колонку
@@ -115,6 +115,19 @@ def row_counter(file):
     print(f' В файле {file} {count} строк')
     return count
 
+# Ручной ввод
+def manual_input():
+    surname = input("Введите фамилию: ")
+    name = input("Введите имя: ")
+    phone = input("Введите телефон: ")
+    note = input("Введите примечание: ")
+    return(surname,name,phone,note)
+
+# Сохранение новой записи
+def save(surname,name,phone,note):
+    with open('database.csv', 'a') as file:
+        file.write(f'\n{surname},{name},{phone},{note},{datetime.now()}')
+    
 
 # db_delimiter = ","
 # out_delimeter = ","
