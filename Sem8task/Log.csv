@@ -1,0 +1,12 @@
+2022-06-02 19:37:24; <function show_db at 0x000001CABE580820>
+2022-06-02 19:37:25; <function show_db at 0x000001CABE580820>
+2022-06-02 19:37:25; <function show_db at 0x000001CABE580820>
+2022-06-02 19:37:47; ('students.csv', 'a') 1;2;3;4;5;6;7;8
+2022-06-02 19:37:47; <function show_db at 0x000001B169280820>
+2022-06-02 19:38:00; ('address.csv', 'a') 1;2;3;4;5;6
+2022-06-02 19:38:00; <function show_db at 0x00000257820A0820>
+2022-06-02 19:42:57; find_entry (10)
+2022-06-02 19:43:37; find_entry (10)
+2022-06-02 19:43:44; <function show_db at 0x0000019E23480820>
+2022-06-02 19:43:44; <function show_db at 0x0000019E23480820>
+2022-06-02 19:43:44; <function show_db at 0x0000019E23480820>
