@@ -26,7 +26,7 @@
 # sum = lambda x,y: x+y
 # print(sum(2,3)) # 1 вариант записи
 
-# print((lambda x,y: x+y)(2,3)) # 2 вариант записи
+print((lambda x,y: x+y)(2,3)) # 2 вариант записи
 
 # # List Comprehension
 
